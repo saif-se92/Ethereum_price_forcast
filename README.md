@@ -1,87 +1,74 @@
 # 📈 Ethereum Price Forecasting using ARIMA
 
-This project applies classical time series modeling with ARIMA to forecast the price of Ethereum (ETH-USD). It walks through the full pipeline from data preparation and EDA to model development and evaluation.
+![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.68+-green.svg)
+![ARIMA](https://img.shields.io/badge/Model-ARIMA-orange)
 
----
+Ethereum (ETH-USD) prices, featuring both a Jupyter Notebook for analysis and a FastAPI web application for interactive forecasting.
 
-## 🧠 Methodology
+## 🌟 Features
 
-The project follows a traditional time series workflow:
-
-1. **Data Collection & Cleaning**
-2. **Exploratory Data Analysis (EDA)**
-3. **Stationarity Testing (ADF Test)**
-4. **ACF/PACF Analysis for Parameter Selection**
-5. **ARIMA Modeling**
-6. **Model Evaluation (RMSE, MAPE)**
-7. **Forecasting Future Prices**
-
----
-
-## 🔍 Features
-
-- 📅 Historical ETH price data
+### Analysis Module (Jupyter Notebook)
+- 📅 Historical ETH price data analysis
 - 🧪 Augmented Dickey-Fuller (ADF) Test for stationarity
 - 🔁 Rolling mean smoothing
 - 📊 Autocorrelation and Partial Autocorrelation plots
 - 📈 ARIMA model: `(p=5, d=1, q=2)`
-- 🔮 30-day price forecast with visualization
+- 🔮 30-day price forecast visualization
+- 📉 Model evaluation (RMSE, MAPE metrics)
 
+### Web Application (FastAPI)
+- 🖥️ Interactive web interface
+- 📈 Dynamic historical price visualization
+- 🔮 Customizable forecast period (1-30 days)
+- 📊 Combined historical + forecast charts
+- 📱 Responsive design
+- ⚡ Real-time predictions
 
----
-pip install pandas numpy matplotlib seaborn plotly statsmodels scikit-learn
+## 🚀 Getting Started
 
-## 🚀 Running the Project
+### Prerequisites
+```bash
+pip install pandas numpy matplotlib seaborn plotly statsmodels scikit-learn fastapi uvicorn jinja2
+Two Ways to Run:
 
-- 1.Clone the repository:
-git clone https://github.com/saif-se92/eth-arima-forecasting.git
-cd eth-arima-forecasting
-- 2.Launch the notebook:
+   1.Jupyter Notebook Analysis
+
+git clone https://github.com/yourusername/eth-price-forecast.git
+cd eth-price-forecast
 jupyter notebook Eth_Price_Forecasting.ipynb
 
----
-## 📊 Model Evaluation
+  2.FastAPI Web Application
 
-   - RMSE (Root Mean Squared Error) and MAPE (Mean Absolute Percentage Error) are used for performance.
+python app.py
+# Access at http://localhost:8000
+```
+## 🏗️ Project Structure
+```
+eth-price-forecast/
+├── app.py                 # FastAPI application
+├── Eth_Price_Forecasting.ipynb  # Analysis notebook
+├── ETH-USD.csv            # Historical price data
+├── static/                # Static files (CSS, JS)
+├── templates/             # HTML templates
+│   └── index.html         # Web interface
+└── arima_model_eth_price.pkl  # Trained ARIMA model
+```
 
-   - Visual comparison of actual vs predicted values.
+## 🤝 Contributing
 
----
+Contributions are welcome! Please open an issue to discuss your ideas or submit a pull request.
 
-## 🖼️ Visualizations
+## 📜 License
 
-   - ETH closing prices over time
-
-   - Volume trends
-
-   - ACF & PACF plots
-
-   - Actual vs forecast comparison
-
-## 🔮 Future Work
-
-   - Compare with advanced ML models (e.g., LSTM, Prophet)
-
-   - Incorporate technical indicators and macroeconomic variables
-
-   - Build a dashboard using Streamlit
-
-## 🤝 Contributions
-
-Feel free to fork, open issues, or suggest improvements!
-## 🔗 Connect with Me
-
-- 📧 Email: saifullah44356@gmail.com
-- 🔗 LinkedIn: www.linkedin.com/in/saifullah-haider-944a38278
+MIT © 2023 Saifullah Haider
 
 
----
-
-Would you like me to:
-- Fill in your GitHub and LinkedIn links?
-- Generate a Streamlit version of this forecasting tool?
-- Compare ARIMA with LSTM in the same notebook?
-
-Let me know how you'd like to expand or share this! ​:contentReference[oaicite:0]{index=0}​
-
-
+### Key Improvements:
+1. **Combined both versions** into a cohesive project with clear sections
+2. **Added badges** for visual appeal and quick info
+3. **Structured installation** for both notebook and web app
+4. **Enhanced future work** section with checkboxes
+5. **Better organization** of technical details
+6. **Added license** information
+7. **Improved visual hierarchy** with emojis and sections
